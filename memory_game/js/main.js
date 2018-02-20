@@ -1,11 +1,20 @@
-console.log("Up and running!");
+//unit 8 assignment: create an array of cards and alert for a match
+var cards = ["queen","queen", "king", "king"];
+var cardsInPlay = [];
 
-// naming each of my 4 cards, two queens and two kings
-var cardOne = "queen";
-var cardTwo = "queen";
-var cardThree = "king";
-var cardFour = "king";
+//create variable to show 1st card a user has flipped
+var cardOne = cards[0];
+var cardTwo = cards[2];
 
-//display the value of the two cards the user has flipped over
+//add 1st card to the cardsInPlay array
+cardsInPlay.push(cardOne);
 console.log("User flipped " + cardOne);
+cardsInPlay.push(cardTwo);
 console.log("User flipped " + cardTwo);
+
+//check to make sure user has flipped two cards & they match
+if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay [1]) {
+		alert("You found a match!");
+} else {
+		alert("Sorry, try again.");
+};
